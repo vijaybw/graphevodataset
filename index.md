@@ -1,5 +1,8 @@
 ## Welcome to GraphEvo Dataset
 
+With the continued evolution of software, there is pressure to maintain a higher level of quality leading to the growing demand for Software Defect Prediction (SDP). Detecting defects in software systems has been an active research area. Researchers have investigated past data and applied various methods for discovering previously unknown bugs and forecasting them. However, most of the past data about software that drives the research are not usually available to the public. Few public datasets exist, but a carefully constructed dataset can be helpful to serve as a benchmark. In this study, we chose 19 open-source Java projects from the publicly available bug dataset, transformed the source code into the graph data, defined a new set of software metrics, including a network portrait metric, and created a public bug database to share with others.
+Additionally, we annotated the association between the defects and already-known code elements. We evaluated the credibility of the datasets for 19 open-source Java projects in prediction models. For the validation of the predictive models, we used 13 classification algorithms and obtained F-measure scores ranged from 0.65 to 0.85. We also observed that bugs from different software release coverage were very high (up to 100 percent) for each release.
+
 More Machine learning results
 
 <table class="tableizer-table">
