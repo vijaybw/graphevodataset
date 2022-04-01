@@ -3,6 +3,195 @@
 With the continued evolution of software, there is pressure to maintain a higher level of quality leading to the growing demand for Software Defect Prediction (SDP). Detecting defects in software systems has been an active research area. Researchers have investigated past data and applied various methods for discovering previously unknown bugs and forecasting them. However, most of the past data about software that drives the research are not usually available to the public. Few public datasets exist, but a carefully constructed dataset can be helpful to serve as a benchmark. In this study, we chose 19 open-source Java projects from the publicly available bug dataset, transformed the source code into the graph data, defined a new set of software metrics, including a network portrait metric, and created a public bug database to share with others.
 Additionally, we annotated the association between the defects and already-known code elements. We evaluated the credibility of the datasets for 19 open-source Java projects in prediction models. For the validation of the predictive models, we used 13 classification algorithms and obtained F-measure scores ranged from 0.65 to 0.85. We also observed that bugs from different software release coverage were very high (up to 100 percent) for each release.
 
+Projects
+
+<table class="tableizer-table">
+   <thead>
+      <tr class="tableizer-firstrow">
+         <th>Project</th>
+         <th>Link</th>
+         <th>Domain</th>
+         <th>Versions</th>
+         <th>#Classes</th>
+         <th>kLOC</th>
+         <th>#Defects</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>universal-I.L.</td>
+         <td><a href="https://github.com/nostra13/Android-Universal-Image-Loader">Link</a></td>
+         <td>Android library</td>
+         <td>6</td>
+         <td>475</td>
+         <td>61</td>
+         <td>92</td>
+      </tr>
+      <tr>
+         <td>ant</td>
+         <td><a href="https://github.com/apache/ant</td>
+         <td>Build tool</td>
+         <td>5</td>
+         <td>2078</td>
+         <td>474</td>
+         <td>767</td>
+      </tr>
+      <tr>
+         <td>antlr</td>
+         <td><a href="https://github.com/antlr/antlr4">Link</a></td>
+         <td>Language processing</td>
+         <td>5</td>
+         <td>1696</td>
+         <td>382</td>
+         <td>45</td>
+      </tr>
+      <tr>
+         <td>broadleafcommerce</td>
+         <td><a href="https://github.com/BroadleafCommerce/BroadleafCommerce">Link</a></td>
+         <td>E-commerce framework</td>
+         <td>8</td>
+         <td>2972</td>
+         <td>248</td>
+         <td>106</td>
+      </tr>
+      <tr>
+         <td>camel</td>
+         <td><a href="https://github.com/apache/camel">Link</a></td>
+         <td>Enterprise Integration</td>
+         <td>2</td>
+         <td>623</td>
+         <td>52</td>
+         <td>463</td>
+      </tr>
+      <tr>
+         <td>hazelcast</td>
+         <td><a href="https://github.com/hazelcast/hazelcast">Link</a></td>
+         <td>Computing platform</td>
+         <td>7</td>
+         <td>10279</td>
+         <td>107</td>
+         <td>2781</td>
+      </tr>
+      <tr>
+         <td>ivy</td>
+         <td><a href="https://github.com/apache/ant-ivy">Link</a></td>
+         <td>Dependency Manager</td>
+         <td>2</td>
+         <td>564</td>
+         <td>91</td>
+         <td>91</td>
+      </tr>
+      <tr>
+         <td>junit</td>
+         <td><a href="https://github.com/junit-team/junit">Link</a></td>
+         <td>Test framework</td>
+         <td>8</td>
+         <td>1054</td>
+         <td>62</td>
+         <td>61</td>
+      </tr>
+      <tr>
+         <td>lucene</td>
+         <td><a href="https://github.com/apache/lucene">Link</a></td>
+         <td>Language processing</td>
+         <td>3</td>
+         <td>640</td>
+         <td>137</td>
+         <td>849</td>
+      </tr>
+      <tr>
+         <td>mapdb</td>
+         <td><a href="https://github.com/jankotek/MapDB">Link</a></td>
+         <td>Database engine</td>
+         <td>6</td>
+         <td>970</td>
+         <td>223</td>
+         <td>174</td>
+      </tr>
+      <tr>
+         <td>mcMMO</td>
+         <td><a href="https://github.com/mcMMO-Dev/mcMMO">Link</a></td>
+         <td>Game</td>
+         <td>4</td>
+         <td>861</td>
+         <td>196</td>
+         <td>270</td>
+      </tr>
+      <tr>
+         <td>netty</td>
+         <td><a href="https://github.com/netty/netty">Link</a></td>
+         <td>Networking framework</td>
+         <td>8</td>
+         <td>4062</td>
+         <td>676</td>
+         <td>1027</td>
+      </tr>
+      <tr>
+         <td>orientdb</td>
+         <td><a href="https://github.com/orientechnologies/orientdb">Link</a></td>
+         <td>Database engine</td>
+         <td>3</td>
+         <td>2369</td>
+         <td>328</td>
+         <td>1015</td>
+      </tr>
+      <tr>
+         <td>pbeans</td>
+         <td><a href="https://sourceforge.net/projects/pbeans">Link</a></td>
+         <td>Language processing</td>
+         <td>2</td>
+         <td>82</td>
+         <td>17</td>
+         <td>56</td>
+      </tr>
+      <tr>
+         <td>poi</td>
+         <td><a href="https://github.com/apache/poi">Link</a></td>
+         <td>Java Library</td>
+         <td>3</td>
+         <td>525</td>
+         <td>146</td>
+         <td>380</td>
+      </tr>
+      <tr>
+         <td>titan</td>
+         <td><a href="https://github.com/thinkaurelius/titan">Link</a></td>
+         <td>Database engine</td>
+         <td>6</td>
+         <td>2997</td>
+         <td>318</td>
+         <td>203</td>
+      </tr>
+      <tr>
+         <td>velocity</td>
+         <td><a href="https://github.com/apache/velocity-engine">Link</a></td>
+         <td>Template Engine</td>
+         <td>3</td>
+         <td>428</td>
+         <td>125</td>
+         <td>92</td>
+      </tr>
+      <tr>
+         <td>xalan</td>
+         <td><a href="https://github.com/apache/xalan-java">Link</a></td>
+         <td>XSLT processor</td>
+         <td>4</td>
+         <td>2752</td>
+         <td>980</td>
+         <td>1441</td>
+      </tr>
+      <tr>
+         <td>xerces</td>
+         <td><a href="https://github.com/apache/xerces2-j">Link</a></td>
+         <td>XML manipulation</td>
+         <td>2</td>
+         <td>659</td>
+         <td>184</td>
+         <td>284</td>
+      </tr>
+   </tbody>
+</table>
+          
 More Machine learning results
 
 <table class="tableizer-table">
