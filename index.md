@@ -29,7 +29,7 @@ Projects
       </tr>
       <tr>
          <td>ant</td>
-         <td><a href="https://github.com/apache/ant</td>
+         <td><a href="https://github.com/apache/ant">Link</a></td>
          <td>Build tool</td>
          <td>5</td>
          <td>2078</td>
@@ -75,7 +75,7 @@ Projects
       <tr>
          <td>ivy</td>
          <td><a href="https://github.com/apache/ant-ivy">Link</a></td>
-         <td>Dependency Manager</td>
+         <td>Dependency manager</td>
          <td>2</td>
          <td>564</td>
          <td>91</td>
@@ -147,7 +147,7 @@ Projects
       <tr>
          <td>poi</td>
          <td><a href="https://github.com/apache/poi">Link</a></td>
-         <td>Java Library</td>
+         <td>Java library</td>
          <td>3</td>
          <td>525</td>
          <td>146</td>
@@ -165,7 +165,7 @@ Projects
       <tr>
          <td>velocity</td>
          <td><a href="https://github.com/apache/velocity-engine">Link</a></td>
-         <td>Template Engine</td>
+         <td>Template engine</td>
          <td>3</td>
          <td>428</td>
          <td>125</td>
